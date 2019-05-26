@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MainShowView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAk-iN-opS">
+                    <rect key="frame" x="172" y="200" width="31" height="30"/>
+                    <state key="normal" title="按钮">
+                        <color key="titleColor" red="1" green="0.068320249439999994" blue="0.05641880832" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="wL9-Tv-tpg"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="swk-Fe-QJO">
+                    <rect key="frame" x="50" y="50" width="275" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="T3e-Ay-BXL"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SwP-7P-Ulg">
+                    <rect key="frame" x="50" y="120" width="275" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="EuB-TV-kKo"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NAk-iN-opS" firstAttribute="top" secondItem="SwP-7P-Ulg" secondAttribute="bottom" constant="50" id="54Y-9f-i7h"/>
+                <constraint firstItem="swk-Fe-QJO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="DeL-Ed-ZzA"/>
+                <constraint firstAttribute="trailing" secondItem="swk-Fe-QJO" secondAttribute="trailing" constant="50" id="GwB-5Q-leM"/>
+                <constraint firstItem="SwP-7P-Ulg" firstAttribute="top" secondItem="swk-Fe-QJO" secondAttribute="bottom" constant="40" id="Vge-uR-Spg"/>
+                <constraint firstItem="swk-Fe-QJO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="hPT-0x-OQi"/>
+                <constraint firstItem="SwP-7P-Ulg" firstAttribute="width" secondItem="swk-Fe-QJO" secondAttribute="width" id="vBW-Ur-L1k"/>
+                <constraint firstItem="SwP-7P-Ulg" firstAttribute="centerX" secondItem="swk-Fe-QJO" secondAttribute="centerX" id="wi1-gJ-V7F"/>
+                <constraint firstItem="NAk-iN-opS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xDg-zc-WiA"/>
+            </constraints>
+            <connections>
+                <outlet property="accountTF" destination="swk-Fe-QJO" id="iY7-Dv-HoC"/>
+                <outlet property="passwordTF" destination="SwP-7P-Ulg" id="OT4-0x-nnJ"/>
+            </connections>
+            <point key="canvasLocation" x="-178" y="84"/>
+        </view>
+    </objects>
+</document>
